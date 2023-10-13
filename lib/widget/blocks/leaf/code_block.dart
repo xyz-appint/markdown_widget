@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/themes/a11y-dark.dart';
-import 'package:flutter_highlight/themes/a11y-light.dart';
-import 'package:highlight/highlight.dart' as hi;
+import 'package:flutter_highlighting/themes/a11y-dark.dart';
+import 'package:flutter_highlighting/themes/a11y-light.dart';
+import 'package:highlighting/highlighting.dart' as hi;
 import 'package:markdown_widget/markdown_widget.dart';
 
 ///Tag: [MarkdownTag.pre]
@@ -64,8 +64,7 @@ List<InlineSpan> highLightSpans(
   return convertHiNodes(
       hi.highlight
           .parse(input.trimRight(),
-              language: autoDetectionLanguage ? null : language,
-              autoDetection: autoDetectionLanguage)
+              languageId: language??"javascript")
           .nodes!,
       theme,
       textStyle,
