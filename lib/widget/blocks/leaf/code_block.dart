@@ -64,7 +64,7 @@ List<InlineSpan> highLightSpans(
   return convertHiNodes(
       hi.highlight
           .parse(input.trimRight(),
-              languageId: language??"javascript")
+              languageId: language??"java")
           .nodes!,
       theme,
       textStyle,
