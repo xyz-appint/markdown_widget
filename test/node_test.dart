@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 import 'test_markdowns/network_image_mock.dart';
-import 'package:highlight/highlight.dart' as hi;
+import 'package:highlighting/highlighting.dart' as hi;
 
 void main() {
   testWidgets('test asset img node', (tester) async {
