@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_highlighting/themes/a11y-dark.dart';
 import 'package:flutter_highlighting/themes/a11y-light.dart';
 import 'package:highlighting/highlighting.dart' as hi;
+import 'package:highlighting/languages/all.dart';
 import 'package:highlighting/languages/java.dart';
+import 'package:highlighting/languages/javascript.dart';
 import 'package:markdown_widget/markdown_widget.dart';
 
 ///Tag: [MarkdownTag.pre]
@@ -63,6 +65,9 @@ List<InlineSpan> highLightSpans(
   int tabSize = 8,
 }) {
   language ??= java.id;
+  if(builtinLanguages[language] == null){
+    language = javascript.id;
+  }
   print('language: $language');
   return convertHiNodes(
       hi.highlight
