@@ -68,7 +68,7 @@ List<InlineSpan> highLightSpans(
   if(builtinLanguages[language] == null){
     language = javascript.id;
   }
-  print('language: $language');
+  // print('language: $language');
   return convertHiNodes(
       hi.highlight
           .parse(input.trimRight(),
