@@ -63,6 +63,7 @@ List<InlineSpan> highLightSpans(
   int tabSize = 8,
 }) {
   language ??= java.id;
+  print('language: $language');
   return convertHiNodes(
       hi.highlight
           .parse(input.trimRight(),
