@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 import '../../../config/configs.dart';
 import '../../proxy_rich_text.dart';
 import '../../span_node.dart';
+import '../../widget_visitor.dart';
 
 ///Tag: [MarkdownTag.blockquote]
 ///
 /// A block quote marker, optionally preceded by up to three spaces of indentation
 class BlockquoteNode extends ElementNode {
   final BlockquoteConfig config;
+  final WidgetVisitor visitor;
 
-  BlockquoteNode(this.config);
+  BlockquoteNode(this.config, this.visitor);
 
   @override
   InlineSpan build() {
@@ -24,7 +26,8 @@ class BlockquoteNode extends ElementNode {
       )),
       padding: config.padding,
       margin: config.margin,
-      child: ProxyRichText(childrenSpan),
+      child:
+          ProxyRichText(childrenSpan, richTextBuilder: visitor.richTextBuilder),
     ));
   }
 
@@ -47,6 +50,9 @@ class BlockquoteConfig implements ContainerConfig {
     this.padding = const EdgeInsets.fromLTRB(16, 2, 0, 2),
     this.margin = const EdgeInsets.fromLTRB(0, 8, 0, 8),
   });
+
+  static BlockquoteConfig get darkConfig =>
+      BlockquoteConfig(textColor: const Color(0xffd0d7de));
 
   @nonVirtual
   @override

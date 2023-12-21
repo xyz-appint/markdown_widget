@@ -87,8 +87,8 @@ class _EditMarkdownPageState extends State<EditMarkdownPage> {
                 final config = isDark
                     ? MarkdownConfig.darkConfig
                     : MarkdownConfig.defaultConfig;
-                final codeWrapper = (child, text) =>
-                    CodeWrapperWidget(child: child, text: text);
+                final codeWrapper = (child, text, language) =>
+                    CodeWrapperWidget(child, text, language);
                 return MarkdownWidget(
                   data: initialText + controller.text,
                   config: config.copy(configs: [
@@ -97,10 +97,13 @@ class _EditMarkdownPageState extends State<EditMarkdownPage> {
                         : PreConfig().copy(wrapper: codeWrapper)
                   ]),
                   markdownGenerator: MarkdownGenerator(
-                      generators: [videoGeneratorWithTag, latexGenerator],
-                      inlineSyntaxList: [LatexSyntax()],
-                      textGenerator: (node, config, visitor) =>
-                          CustomTextNode(node.textContent, config, visitor)),
+                    generators: [videoGeneratorWithTag, latexGenerator],
+                    inlineSyntaxList: [LatexSyntax()],
+                    textGenerator: (node, config, visitor) =>
+                        CustomTextNode(node.textContent, config, visitor),
+                    richTextBuilder: (span) =>
+                        Text.rich(span, textScaleFactor: 1),
+                  ),
                 );
               }),
         ),
