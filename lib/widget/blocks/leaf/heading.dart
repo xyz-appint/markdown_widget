@@ -59,8 +59,13 @@ class _Divider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(top: divider.space),
-        child: Divider(height: divider.height, color: divider.color));
+      margin: EdgeInsets.only(top: divider.space),
+      child: Divider(
+        height: divider.height,
+        color: divider.color.withOpacity(0.5),
+        thickness: 0.3,
+      ),
+    );
   }
 }
 
