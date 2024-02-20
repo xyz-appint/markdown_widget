@@ -91,7 +91,7 @@ class HeadingDivider {
           space: space ?? this.space,
           height: height ?? this.height);
 
-  static HeadingDivider h1 = HeadingDivider();
+  static HeadingDivider h1 = HeadingDivider(space: 6.4);
 
   static HeadingDivider h2 = HeadingDivider(space: 3.6);
 
