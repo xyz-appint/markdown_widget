@@ -28,11 +28,11 @@ class HrConfig implements LeafConfig {
   final double height;
   final Color color;
 
-  const HrConfig({this.height = 1, this.color = const Color(0xa3ebecec)});
+  const HrConfig({this.height = 0.5, this.color = const Color(0xa3ebecec)});
 
   @nonVirtual
   @override
   String get tag => MarkdownTag.hr.name;
 
-  static HrConfig get darkConfig => const HrConfig(color: Colors.white54);
+  static HrConfig get darkConfig => const HrConfig(color: Colors.white24);
 }
