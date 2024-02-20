@@ -60,6 +60,7 @@ class _Divider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: divider.space),
+      padding: EdgeInsets.only(top: 4),
       child: Divider(
         height: divider.height,
         color: divider.color.withOpacity(0.5),
