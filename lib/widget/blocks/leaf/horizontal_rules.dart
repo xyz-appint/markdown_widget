@@ -28,7 +28,7 @@ class HrConfig implements LeafConfig {
   final double height;
   final Color color;
 
-  const HrConfig({this.height = 1, this.color = const Color(0xFFd0d7de)});
+  const HrConfig({this.height = 1, this.color = const Color(0xc8a4a7a9)});
 
   @nonVirtual
   @override
