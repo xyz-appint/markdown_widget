@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
 import '../../../config/configs.dart';
 import '../../proxy_rich_text.dart';
 import '../../span_node.dart';
@@ -109,7 +110,7 @@ class H1Config extends HeadingConfig {
 
   const H1Config(
       {this.style = const TextStyle(
-        fontSize: 32,
+        fontSize: 24,
         height: 40 / 32,
         fontWeight: FontWeight.bold,
       )});
@@ -120,7 +121,7 @@ class H1Config extends HeadingConfig {
 
   static H1Config get darkConfig => const H1Config(
           style: const TextStyle(
-        fontSize: 32,
+        fontSize: 24,
         height: 40 / 32,
         color: Colors.white,
         fontWeight: FontWeight.bold,
@@ -136,7 +137,7 @@ class H2Config extends HeadingConfig {
 
   const H2Config(
       {this.style = const TextStyle(
-        fontSize: 24,
+        fontSize: 20,
         height: 30 / 24,
         fontWeight: FontWeight.bold,
       )});
@@ -147,7 +148,7 @@ class H2Config extends HeadingConfig {
 
   static H2Config get darkConfig => const H2Config(
           style: const TextStyle(
-        fontSize: 24,
+        fontSize: 20,
         height: 30 / 24,
         color: Colors.white,
         fontWeight: FontWeight.bold,
@@ -163,7 +164,7 @@ class H3Config extends HeadingConfig {
 
   const H3Config(
       {this.style = const TextStyle(
-        fontSize: 20,
+        fontSize: 18,
         height: 25 / 20,
         fontWeight: FontWeight.bold,
       )});
@@ -174,7 +175,7 @@ class H3Config extends HeadingConfig {
 
   static H3Config get darkConfig => const H3Config(
           style: const TextStyle(
-        fontSize: 20,
+        fontSize: 18,
         height: 25 / 20,
         color: Colors.white,
         fontWeight: FontWeight.bold,
