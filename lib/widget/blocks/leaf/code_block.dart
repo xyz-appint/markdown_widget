@@ -25,7 +25,10 @@ class CodeBlockNode extends ElementNode {
   InlineSpan build() {
     String? language = preConfig.language;
     try {
-      if (element.children != null && element.children!.isNotEmpty) {
+      if (element.children != null &&
+          element.children!.isNotEmpty &&
+          element.children?.first != null &&
+          (element.children?.first as m.Element).attributes['class'] != null) {
         final languageValue =
             (element.children?.first as m.Element).attributes['class']!;
         language = languageValue.split('-').last;
