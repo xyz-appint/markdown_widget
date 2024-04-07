@@ -18,8 +18,8 @@ dependencies:
   #markdown data parser
   markdown: ^7.2.2
   #highlight code
-  highlighting: ^0.9.0+11.8.0
-  flutter_highlighting: ^0.9.0+11.8.0
+  highlight: ^0.7.0
+  flutter_highlight: ^0.7.0
 
 
   # to click link
@@ -37,6 +37,7 @@ dev_dependencies:
   mockito: ^5.3.2
   build_runner: ^2.3.3
   path: ^1.8.2
+  lints: ^2.1.1
 flutter:
 
 
