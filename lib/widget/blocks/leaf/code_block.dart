@@ -6,8 +6,8 @@ import 'package:highlighting/highlighting.dart' as hi;
 import 'package:highlighting/languages/all.dart';
 import 'package:highlighting/languages/java.dart';
 import 'package:highlighting/languages/javascript.dart';
-import 'package:markdown_widget/markdown_widget.dart';
 import 'package:markdown/markdown.dart' as m;
+import 'package:markdown_widget/markdown_widget.dart';
 
 ///Tag: [MarkdownTag.pre]
 ///
@@ -25,9 +25,11 @@ class CodeBlockNode extends ElementNode {
   InlineSpan build() {
     String? language = preConfig.language;
     try {
-      final languageValue =
-          (element.children?.first as m.Element).attributes['class']!;
-      language = languageValue.split('-').last;
+      if (element.children != null && element.children!.isNotEmpty) {
+        final languageValue =
+            (element.children?.first as m.Element).attributes['class']!;
+        language = languageValue.split('-').last;
+      }
     } catch (e) {
       language = null;
       debugPrint('get language error:$e');
@@ -84,15 +86,12 @@ List<InlineSpan> highLightSpans(
   int tabSize = 8,
 }) {
   language ??= java.id;
-  if(builtinLanguages[language] == null){
+  if (builtinLanguages[language] == null) {
     language = javascript.id;
   }
   // print('language: $language');
   return convertHiNodes(
-      hi.highlight
-          .parse(input.trimRight(),
-              languageId: language)
-          .nodes!,
+      hi.highlight.parse(input.trimRight(), languageId: language).nodes!,
       theme,
       textStyle,
       styleNotMatched);
