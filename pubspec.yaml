@@ -18,8 +18,8 @@ dependencies:
   #markdown data parser
   markdown: ^7.2.2
   #highlight code
-  highlight: ^0.7.0
-  flutter_highlight: ^0.7.0
+  highlighting: ^0.9.0+11.8.0
+  flutter_highlighting: ^ 0.9.0+11.8.0
 
 
   # to click link
