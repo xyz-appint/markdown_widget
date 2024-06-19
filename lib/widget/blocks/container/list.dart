@@ -89,7 +89,7 @@ class ListNode extends ElementNode {
     final space = config.li.marginLeft;
     final marginBottom = config.li.marginBottom;
     final parentStyleHeight =
-        (parentStyle?.fontSize ?? config.p.textStyle.fontSize ?? 16.0) *
+        (parentStyle?.fontSize ?? config.p.textStyle.fontSize ?? 14.0) *
             (parentStyle?.height ?? config.p.textStyle.height ?? 1.2);
     Widget marker;
     if (isCheckbox) {

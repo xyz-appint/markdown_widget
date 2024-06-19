@@ -200,7 +200,7 @@ class H4Config extends HeadingConfig {
 
   const H4Config(
       {this.style = const TextStyle(
-        fontSize: 16,
+        fontSize: 14,
         height: 20 / 16,
         fontWeight: FontWeight.bold,
       )});
@@ -211,7 +211,7 @@ class H4Config extends HeadingConfig {
 
   static H4Config get darkConfig => const H4Config(
           style: TextStyle(
-        fontSize: 16,
+        fontSize: 14,
         height: 20 / 16,
         color: Colors.white,
         fontWeight: FontWeight.bold,
@@ -225,7 +225,7 @@ class H5Config extends HeadingConfig {
 
   const H5Config(
       {this.style = const TextStyle(
-        fontSize: 16,
+        fontSize: 14,
         height: 20 / 16,
         fontWeight: FontWeight.bold,
       )});
@@ -236,7 +236,7 @@ class H5Config extends HeadingConfig {
 
   static H5Config get darkConfig => const H5Config(
           style: TextStyle(
-        fontSize: 16,
+        fontSize: 14,
         height: 20 / 16,
         color: Colors.white,
         fontWeight: FontWeight.bold,
@@ -250,7 +250,7 @@ class H6Config extends HeadingConfig {
 
   const H6Config(
       {this.style = const TextStyle(
-        fontSize: 16,
+        fontSize: 14,
         height: 20 / 16,
         fontWeight: FontWeight.bold,
       )});
@@ -261,7 +261,7 @@ class H6Config extends HeadingConfig {
 
   static H6Config get darkConfig => const H6Config(
           style: TextStyle(
-        fontSize: 16,
+        fontSize: 14,
         height: 20 / 16,
         color: Colors.white,
         fontWeight: FontWeight.bold,
