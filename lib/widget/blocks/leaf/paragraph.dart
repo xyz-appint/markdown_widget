@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
 import '../../../config/configs.dart';
 import '../../span_node.dart';
 
@@ -28,10 +29,10 @@ class ParagraphNode extends ElementNode {
 class PConfig implements LeafConfig {
   final TextStyle textStyle;
 
-  const PConfig({this.textStyle = const TextStyle(fontSize: 16)});
+  const PConfig({this.textStyle = const TextStyle(fontSize: 14)});
 
   static PConfig get darkConfig =>
-      PConfig(textStyle: const TextStyle(fontSize: 16));
+      PConfig(textStyle: const TextStyle(fontSize: 14));
 
   @nonVirtual
   @override

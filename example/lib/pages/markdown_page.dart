@@ -145,7 +145,7 @@ class _MarkdownPageState extends State<MarkdownPage> {
                       color: Colors.transparent,
                       child: Text(
                         isEnglish ? 'Copy successful' : '复制成功',
-                        style: TextStyle(fontSize: 15, color: Colors.white),
+                        style: TextStyle(fontSize: 14, color: Colors.white),
                       ),
                     ),
                   ),

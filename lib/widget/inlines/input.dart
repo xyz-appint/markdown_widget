@@ -18,7 +18,7 @@ class InputNode extends SpanNode {
       checked = attr['checked']!.toLowerCase() == 'true';
     }
     final parentStyleHeight =
-        (parentStyle?.fontSize ?? config.p.textStyle.fontSize ?? 16.0) *
+        (parentStyle?.fontSize ?? config.p.textStyle.fontSize ?? 14.0) *
             (parentStyle?.height ?? config.p.textStyle.height ?? 1.5);
     return WidgetSpan(
       child: config.input.builder?.call(checked) ??
